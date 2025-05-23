@@ -1,0 +1,6 @@
+public with sharing class CarDataController {
+    @AuraEnabled(cacheable=true)
+    public static List<Car__c> getCarData() {
+        return [SELECT Make__c, Model__c, Year__c, Color__c FROM Car__c];
+    }
+}

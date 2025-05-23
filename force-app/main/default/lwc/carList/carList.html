@@ -1,0 +1,14 @@
+<template>
+    <lightning-button label="Show Car List" onclick={handleClick}></lightning-button>
+    <template if:true={showCarList}>
+        <lightning-card title="Car List">
+            <lightning-datatable
+                key-field="Id"
+                data={carData}
+                columns={columns}
+                hide-checkbox-column
+            >
+            </lightning-datatable>
+        </lightning-card>
+    </template>
+</template>
